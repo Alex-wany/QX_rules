@@ -1,0 +1,11 @@
+#!name=训记VIP解锁
+#!desc=解锁训记VIP会员功能
+#!author=
+#!homepage=
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7b/7b/7b/7b7b7b7b-7b7b-7b7b-7b7b-7b7b7b7b7b7b/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144bb.png
+
+[MITM]
+hostname = %APPEND% api.xunjiapp.cn
+
+[Script]
+训记VIP = type=http-response, pattern=^https?:\/\/api\.xunjiapp\.cn\/(whole_user_info_checks_2|try_vip_get), requires-body=1, max-size=0, script-path=xj.js, script-update-interval=0
