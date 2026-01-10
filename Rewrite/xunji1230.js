@@ -6,7 +6,7 @@ hostname = api.xunjiapp.cn
 // 最高版本7.00.229
 const $ = new Env("训记VIP");
 const CONFIG = {
-  USER_INFO: { name: "baby", vipds: 99999, isAdmin: false, expiry: Date.now() + 99999 * 24 * 60 * 60 * 1000 },
+  USER_INFO: { name: "王东东", vipds: 99999, isAdmin: false, expiry: Date.now() + 99999 * 24 * 60 * 60 * 1000 },
   TRY_VIP: { vipDay: 99999, hasTry: true, showVipTry: false }
 };
 
