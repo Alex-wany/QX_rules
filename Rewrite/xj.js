@@ -1,11 +1,12 @@
 /*
- * 训记
+ * 训记 支持最高版本7.00.229
  * Surge/Loon: 训记VIP = type=http-response, pattern=^https?:\/\/api\.xunjiapp\.cn\/(whole_user_info_checks_2|try_vip_get), requires-body=1, script-path=训记VIP.js
  * QuantumultX: ^https?:\/\/api\.xunjiapp\.cn\/(whole_user_info_checks_2|try_vip_get) url script-response-body 训记VIP.js
  */
+
 const $ = new Env("训记VIP");
 const CONFIG = {
-  USER_INFO: { name: "baby", vipds: 365, isAdmin: true, expiry: Date.now() + 365 * 24 * 60 * 60 * 1000 },
+  USER_INFO: { name: "王东东", vipds: 365, isAdmin: true, expiry: Date.now() + 365 * 24 * 60 * 60 * 1000 },
   TRY_VIP: { vipDay: 365, hasTry: true, showVipTry: false }
 };
 
@@ -93,3 +94,4 @@ function Env(name) {
   const msg = (title, sub = "", body = "", opts = {}) => { if (isSurge || isLoon) $notification.post(title, sub, body, opts); else if (isQX) $notify(title, sub, body, opts); else log(title, sub, body); };
   return { name, log, getdata, setdata, http, getScript, msg, isSurge, isLoon, isQX };
 }
+
