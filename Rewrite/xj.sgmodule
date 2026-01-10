@@ -8,6 +8,7 @@
 hostname = %APPEND% api.xunjiapp.cn
 
 [Script]
-训记VIP = type=http-response, pattern=^https?:\/\/api\.xunjiapp\.cn\/(whole_user_info_checks_2|try_vip_get), requires-body=1, max-size=0, script-path=训记.js, script-update-interval=0
+训记VIP = type=http-response, pattern=^https?:\/\/api\.xunjiapp\.cn\/(whole_user_info_checks_2|try_vip_get), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Alex-wany/QX_rules/refs/heads/main/Rewrite/xj.js, script-update-interval=0
+
 
 
